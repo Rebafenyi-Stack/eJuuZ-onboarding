@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eJuuZ Trader Onboarding</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/ejuuzlogo.png" alt="eJuuZ Platform Logo" class="header-logo">
+        </div>
+        <button class="nav-toggle-btn" onclick="document.getElementById('popupNav').classList.add('active')">
+            Select Form ⬇️
+        </button>
+    </header>
+
+    <div class="form-container">
+        <header class="form-header">
+            <h1>Local Trader / Merchant Onboarding</h1>
+            <p>For individual sellers, spaza shops, salons, and informal businesses.</p>
+        </header>
+
+        <form id="onboarding-form" class="onboarding-form">
+            <input type="hidden" name="role" value="trader">
+
+            <div class="step step-1 active">
+                <h2>1. Core & Business Details</h2>
+                <input type="text" name="trader_full_name" placeholder="Full Name & Surname" required>
+                <input type="text" name="trader_id_number" placeholder="ID / Passport Number" required>
+                <input type="text" name="trader_business_name" placeholder="Business Name (if any)">
+                
+                <select name="trader_category" required>
+                    <option value="">-- Trading Type / Category --</option>
+                    <option value="spaza">Spaza Shop</option>
+                    <option value="salon">Salon</option>
+                    <option value="food_vendor">Food Vendor</option>
+                    <option value="crafts">Crafts/Artisan</option>
+                    <option value="services">Services (e.g., Repair)</option>
+                </select>
+                
+                <input type="text" name="trader_address" placeholder="Physical Address / Trading Location" required>
+                <input type="tel" name="trader_whatsapp" placeholder="WhatsApp Number (e.g., +27...)" required>
+                <input type="email" name="trader_email" placeholder="Email Address (Required for Notifications)" required>
+                <textarea name="trader_products" placeholder="Products/Services Offered (Short description)" required></textarea>
+                
+                <h2 style="margin-top: 20px;">2. Payout Details & Documents</h2>
+                
+                <select name="trader_payout_method" id="trader-payout-select" required>
+                    <option value="">-- Select Preferred Payout Method --</option>
+                    <option value="bank">Bank Transfer</option>
+                    <option value="ewallet">eWallet / Mobile Money</option>
+                    <option value="cashsend">CashSend</option>
+                </select>
+                
+                <div id="trader-bank-details" class="bank-details-fields hidden">
+                    <input type="text" name="trader_bank_name" placeholder="Bank Name">
+                    <input type="text" name="trader_account_holder" placeholder="Account Holder Name">
+                    <input type="text" name="trader_account_number" placeholder="Account Number">
+                </div>
+
+                <h3>Document Uploads (for manual submission)</h3>
+                <label for="trader_upload_id">ID Document / Passport *</label>
+                <input type="file" name="trader_upload_id" accept=".pdf,.jpg,.png">
+                
+                <label class="checkbox-container" style="margin-top: 20px;">
+                    <input type="checkbox" name="trader_consent_tcs" required>
+                    I accept the <a href="terms.html" target="_blank" style="color: var(--ejuuz-primary);">eJuuZ Terms & Conditions</a>.
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn" data-role="trader">Submit Trader Registration</button>
+            
+            <p id="submission-message" style="display: none; text-align: center; color: var(--ejuuz-primary); margin-top: 20px;"></p>
+        </form>
+    </div>
+
+    <div class="partners-belt">
+    <h3>Trusted Partners</h3>
+    
+    <div class="marquee-container">
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stan.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/inves.png" alt="Partner 6 Logo">
+        </div>
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stan.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/inves.png" alt="Partner 6 Logo">
+        </div>
+        
+    </div>
+    </div>
+
+    <div id="popupNav" class="popup-nav" onclick="if(event.target.id === 'popupNav') this.classList.remove('active')">
+        <div class="nav-content">
+            <span class="close-btn" onclick="document.getElementById('popupNav').classList.remove('active')">&times;</span>
+            <h2>Select Your Registration Category</h2>
+            <a href="index.html">Home</a>
+            <a href="trader_onboarding.html">Local Trader / Merchant</a>
+            <a href="business_onboarding.html">Formal Local Business</a>
+            <a href="ngo_onboarding.html">NGO / Community Org.</a>
+            <a href="driver_onboarding.html">Delivery Driver</a>
+            <a href="shopper_onboarding.html">General User / Shopper</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>
+            &copy; 2025 eJuuZ Platform. | 
+            <a href="terms.html">Terms and Conditions</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>

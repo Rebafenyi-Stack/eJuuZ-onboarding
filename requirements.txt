@@ -1,0 +1,15 @@
+# Requirements for eJuuZ Platform Backend
+
+# Core dependencies
+Flask==2.3.2
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Database dependencies
+# SQLite is included with Python standard library
+
+# Firebase dependencies (uncomment if using Firebase)
+firebase-admin==6.2.0
+
+# Supabase dependencies (keeping existing)
+supabase==1.0.3

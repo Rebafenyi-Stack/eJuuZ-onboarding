@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eJuuZ - Connecting Local Ecosystems</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/ejuuzlogo.png" alt="eJuuZ Platform Logo" class="header-logo">
+        </div>
+        <button class="nav-toggle-btn" onclick="document.getElementById('popupNav').classList.add('active')">
+            Get Started ⬇️
+        </button>
+    </header>
+
+    <main class="home-container">
+        <section class="hero form-container" style="text-align: center; max-width: 800px; margin-top: 50px;">
+            <img src="images/ejuuz.png" alt="eJuuZ Logo" class="hero-logo" style="max-height: 100px;">
+            <h1 style="color: var(--ejuuz-primary); font-size: 2.2em; margin-bottom: 15px;">
+                Connecting Communities, Powering Local Trade.
+            </h1>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                eJuuZ is your mobile-first ecosystem designed to digitize local township and village economies. We empower informal traders, support NGOs, and provide shoppers with easy, secure access to local goods and services.
+            </p>
+            <p style="margin-top: 20px;">
+                <button class="submit-btn" style="width: 70%;" onclick="document.getElementById('popupNav').classList.add('active')">
+                    Choose Your Category and Join Us Today!
+                </button>
+            </p>
+        </section>
+    </main>
+
+    <div class="partners-belt">
+    <h3>Trusted Partners</h3>
+    
+    <div class="marquee-container">
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stand.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/ocfo.png" alt="Partner 6 Logo">
+        </div>
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stan.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/ocfo.png" alt="Partner 6 Logo">
+        </div>
+        
+    </div>
+    </div>
+
+    <div id="popupNav" class="popup-nav" onclick="if(event.target.id === 'popupNav') this.classList.remove('active')">
+        <div class="nav-content">
+            <span class="close-btn" onclick="document.getElementById('popupNav').classList.remove('active')">&times;</span>
+            <h2>Select Your Registration Category</h2>
+            <a href="index.html">Home</a>
+            <a href="trader_onboarding.html">Local Trader / Merchant</a>
+            <a href="business_onboarding.html">Formal Local Business</a>
+            <a href="ngo_onboarding.html">NGO / Community Org.</a>
+            <a href="driver_onboarding.html">Delivery Driver</a>
+            <a href="shopper_onboarding.html">General User / Shopper</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>
+            &copy; 2025 eJuuZ Platform. | 
+            <a href="terms.html">Terms and Conditions</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script> 
+        // Simple JS to ensure smooth dropdown closure if the main script isn't loaded
+        document.getElementById('popupNav').addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                document.getElementById('popupNav').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

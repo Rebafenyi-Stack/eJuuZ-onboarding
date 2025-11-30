@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eJuuZ NGO Onboarding</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/ejuuzlogo.png" alt="eJuuZ Platform Logo" class="header-logo">
+        </div>
+        <button class="nav-toggle-btn" onclick="document.getElementById('popupNav').classList.add('active')">
+            Select Form ⬇️
+        </button>
+    </header>
+
+    <div class="form-container">
+        <header class="form-header">
+            <h1>NGO / Community Organization Onboarding</h1>
+            <p>For charities, NPOs, community projects, schools, and clinics.</p>
+        </header>
+
+        <form id="onboarding-form" class="onboarding-form">
+            <input type="hidden" name="role" value="ngo">
+
+            <div class="step step-1 active">
+                <h2>1. Organization & Contact Details</h2>
+                <input type="text" name="ngo_organization_name" placeholder="Organization Name" required>
+                <input type="text" name="ngo_registration_number" placeholder="Registration Number (NPO/NGO/CBO)" required>
+                
+                <input type="text" name="ngo_contact_person" placeholder="Contact Person Full Name" required>
+                <input type="text" name="ngo_contact_role" placeholder="Contact Person Role/Title" required>
+                
+                <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="ngo_physical_address" placeholder="Physical Address" required>
+                
+                <select name="ngo_type" required>
+                    <option value="">-- Type of NGO --</option>
+                    <option value="youth">Youth</option>
+                    <option value="women">Women Empowerment</option>
+                    <option value="health">Health / Clinic</option>
+                    <option value="education">Education / School</option>
+                    <option value="environment">Environmental</option>
+                </select>
+                
+                <textarea name="ngo_purpose" placeholder="Purpose / Mission Statement (Short text)" required></textarea>
+                
+                <h2 style="margin-top: 20px;">2. Document Uploads</h2>
+                
+                <label for="ngo_upload_certificate">NGO Registration Certificate *</label>
+                <input type="file" name="ngo_upload_certificate" accept=".pdf,.jpg,.png" required>
+                
+                <label class="checkbox-container" style="margin-top: 20px;">
+                    <input type="checkbox" name="ngo_consent_legitimacy" required>
+                    I confirm the legitimacy of the organization and accept the T&Cs.
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn" data-role="ngo">Submit NGO Registration</button>
+            
+            <p id="submission-message" style="display: none; text-align: center; color: var(--ejuuz-primary); margin-top: 20px;"></p>
+        </form>
+    </div>
+
+   <div class="partners-belt">
+    <h3>Trusted Partners</h3>
+    
+    <div class="marquee-container">
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stan.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/inves.png" alt="Partner 6 Logo">
+        </div>
+        
+        <div class="partner-logos marquee-track">
+            <img src="images/stan.png" alt="Partner 1 Logo">
+            <img src="images/gap.png" alt="Partner 2 Logo">
+            <img src="images/old.png" alt="Partner 3 Logo">
+            <img src="images/tuks.png" alt="Partner 4 Logo">
+            <img src="images/sams.png" alt="Partner 5 Logo">
+            <img src="images/inves.png" alt="Partner 6 Logo">
+        </div>
+        
+    </div>
+    </div>
+
+    <div id="popupNav" class="popup-nav" onclick="if(event.target.id === 'popupNav') this.classList.remove('active')">
+        <div class="nav-content">
+            <span class="close-btn" onclick="document.getElementById('popupNav').classList.remove('active')">&times;</span>
+            <h2>Select Your Registration Category</h2>
+            <a href="index.html">Home</a>
+            <a href="trader_onboarding.html">Local Trader / Merchant</a>
+            <a href="business_onboarding.html">Formal Local Business</a>
+            <a href="ngo_onboarding.html">NGO / Community Org.</a>
+            <a href="driver_onboarding.html">Delivery Driver</a>
+            <a href="shopper_onboarding.html">General User / Shopper</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>
+            &copy; 2025 eJuuZ Platform. | 
+            <a href="terms.html">Terms and Conditions</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>
